@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List 2021</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>My to do list</h1>
+      <form id="new-task-form" class="task__entry">
+        <div class="task-input">
+          <input
+            type="text"
+            name="new-task-input"
+            id="new-task-input"
+            placeholder="Type a work item to add here"
+            class="entry"
+          />
+        </div>
+        <a href="#" id="new-task-submit"> Add new task </a>
+      </form>
+      
+    </header>
+    <main>
+      <section class="task-list">
+        <div id="tasks">
+          <div class="task" style="display: none">
+            <div class="content">
+				<div class="card__top">
+          <p class="card__title">Task<span class="task-number"></span></p>
+					
+					<input type="checkbox" id="done" name="done" value="task">
+				</div>
+    
+              <div type="text" class="text" value="" readonly style="width:200px" />
+            </div>
+            <div class="actions">
+              <button class="delete">Remove</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

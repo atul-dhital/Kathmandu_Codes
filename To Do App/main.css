@@ -1,0 +1,200 @@
+:root {
+  --dark: #374151;
+  --darker: #303641;
+  --darkest: #111827;
+  --grey: #6b7280;
+  --pink: #a14875;
+  --purple: #8b5cf6;
+  --light: #eee;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fira sans", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 1240px;
+  width: 100%;
+  min-height: 100%;
+  color: #fff;
+  background-color: white;
+  margin: 0 auto;
+}
+body .header {
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (max-width: 600px) {
+  body .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+body .header h1 {
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--grey);
+  margin-bottom: 16px;
+  margin-right: 10px;
+  color: #772727;
+}
+body #new-task-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+body input,
+body button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+body #new-task-input {
+  background-color: transparent;
+  padding: 16px;
+  border-radius: 16px;
+  margin-right: 16px;
+  color: #111827;
+  font-size: 20px;
+  width: 300px;
+  min-height: 100px;
+  border: 1px solid rgb(24, 21, 21);
+}
+body #new-task-input::-moz-placeholder {
+  color: rgb(36, 32, 32);
+}
+body #new-task-input::placeholder {
+  color: rgb(36, 32, 32);
+}
+body #new-task-submit {
+  color: var(--pink);
+  font-size: 25px;
+  font-weight: 700;
+  background-color: green;
+  padding: 12px;
+  color: white !important;
+  border-radius: 15px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.4s;
+}
+body #new-task-submit:hover {
+  opacity: 0.8;
+}
+body #new-task-submit:active {
+  opacity: 0.6;
+}
+body main {
+  flex: 1 1 0%;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+body main .task-list {
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+body main .task-list h2 {
+  font-size: 25px;
+  font-weight: 300;
+  color: var(--grey);
+  margin-bottom: 16px;
+}
+body main .task-list #tasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+body main .task-list #tasks .task {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--darkest);
+  padding: 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  max-width: 400px;
+  min-height: 100px;
+}
+body main .task-list #tasks .task .content {
+  flex: 1 1 0%;
+  min-height: 100px;
+}
+body main .task-list #tasks .task .content .card__top {
+  border-bottom: 2px solid white;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+body main .task-list #tasks .task .content .card__top .card__title {
+  font-size: 20px;
+}
+body main .task-list #tasks .task .content .card__top #done {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  padding: 8px 12px;
+}
+body main .task-list #tasks .task .content .card__top #done:focus {
+  outline: none;
+  border-color: rgb(92, 92, 177);
+}
+body main .task-list #tasks .task .content .text {
+  color: var(--light);
+  font-size: 18px;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+  padding-top: 10px;
+  font-size: 20px;
+}
+body main .task-list #tasks .task .content .text:not(:-moz-read-only) {
+  color: var(--pink);
+}
+body main .task-list #tasks .task .content .text:not(:read-only) {
+  color: var(--pink);
+}
+body main .task-list #tasks .task .actions {
+  display: flex;
+  margin: 0 -8px;
+  justify-content: center;
+}
+body main .task-list #tasks .task .actions .delete {
+  cursor: pointer;
+  margin: 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+  color: brown;
+}
+body main .task-list #tasks .task .actions .delete:hover {
+  opacity: 0.8;
+}
+body main .task-list #tasks .task .actions .delete:active {
+  opacity: 1;
+}
+
+.text {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 100%;
+  text-align: center;
+  height: auto;
+  height: 200px;
+}/*# sourceMappingURL=main.css.map */
